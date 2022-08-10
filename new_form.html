@@ -62,5 +62,14 @@
         else textError.textContent = "First Name is Incorrect!";
       });
 
+      const email =  document.querySelector('#email');
+      const textError1 =  document.querySelector('.email-error');
+      email.addEventListener('input',function(){
+        let emailIdRegex = RegExp('[a-z][a-z A-Z 0-9]+[@][a-z]+[.][a-z]{2,5}')
+        if(emailIdRegex.test(email.value))
+        textError1.textContent = "";
+        else textError1.textContent = "Email Id is Incorrect!";
+      });
+
      </script>
 </body>
